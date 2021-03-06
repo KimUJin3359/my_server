@@ -1,0 +1,3 @@
+CREATE DATABASE my_schema;
+GRANT ALL PRIVILEGES ON my_schema.* TO 'ujin'@'localhost' IDENTIFIED BY '1q2w3e4r!';
+FLUSH PRIVILEGES;
