@@ -22,8 +22,10 @@ server {
 	# root directory
 	root /var/www/html;
 
-	# reads file
-	index index.html index.htm index.nginx-debian.html index.php;
+	# reads file _ when autoindex on;
+	index index.html index.htm index.php; 
+	# reads file _ when autoindex off;
+	# index index.html index.html index.php index.nginx-debian.html;
 
 	location / {
 		autoindex on;

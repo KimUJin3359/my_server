@@ -70,9 +70,6 @@ RUN service mysql start && mysql -u root mysql < /tmp/db_setting.sql
 RUN mkdir -p /var/www/html/phpmyadmin/tmp
 RUN chmod 777 /var/www/html/phpmyadmin/tmp
 
-# setting Autoindex
-RUN rm -rf /var/www/html/index.*
-
 # RUN - make a new layer, or execute command
 # CMD - when docker instruction run, cmd's instruction is ignored
 # cmd isn't work when using run -it [docker_image]/bin/bash
@@ -80,4 +77,4 @@ RUN rm -rf /var/www/html/index.*
 COPY ./srcs/run.sh /tmp/run.sh
 RUN chmod 777 /tmp/run.sh
 CMD  /tmp/run.sh
-
+# CMD /bin/bash
