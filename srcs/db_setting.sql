@@ -1,3 +1,2 @@
-CREATE DATABASE my_schema;
-GRANT ALL PRIVILEGES ON my_schema.* TO 'ujin'@'localhost' IDENTIFIED BY '1q2w3e4r!';
-FLUSH PRIVILEGES;
+CREATE DATABASE wordpress;
+GRANT ALL ON wordpress.* TO 'ujin'@'localhost' IDENTIFIED BY '1q2w3e4r!';
