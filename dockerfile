@@ -48,7 +48,6 @@ RUN rm -rf phpMyAdmin-5.0.2-all-languages.zip
 COPY ./srcs/config.inc.php /var/www/html/phpmyadmin/config.inc.php
 COPY ./srcs/wp-config.php /var/www/html/wordpress/wp-config.php
 COPY ./srcs/default /etc/nginx/sites-available/default
-# COPY ./srcs/phpmyadmin.conf /etc/nginx/conf.d/
 
 # setting DATABASE
 # there is no password -> so only ID(root)
@@ -76,5 +75,5 @@ RUN rm -rf /var/www/html/index.*
 # CMD - when docker instruction run, cmd's instruction is ignored
 # cmd isn't work when using run -it [docker_image]/bin/bash
 # because bin/bash is executed
-# CMD /bin/bash
+CMD /bin/bash
 

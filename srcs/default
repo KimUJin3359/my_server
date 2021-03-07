@@ -4,7 +4,7 @@ server {
 
 	server_name localhost;
 
-	return 301 https://localhost:443$request_uri;
+	return 301 https://$host$request_uri;
 }
 
 server {
@@ -15,6 +15,7 @@ server {
 	ssl on;
 	include snippets/self-signed.conf;
 	include snippets/ssl-params.conf;
+	error_page 497 https://$host:$server_port$request_uri;
 
 	server_name localhost;
 
